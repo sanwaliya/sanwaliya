@@ -14,6 +14,6 @@ development:
   
 production:
   <<: *default
-  database: sanwaliya_production
-  username: postgres
-  password: postgres
+  database: <%= ENV['DATABASE_URL'] %>
+  #username: postgres
+  #password: postgres
