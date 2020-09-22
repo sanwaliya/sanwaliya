@@ -5,7 +5,7 @@ ActiveAdmin.register Customer do
   index do
     selectable_column
     id_column
-    column :image  do |customer|
+    column :images  do |customer|
         image_tag customer.images.last.file.url
       end
     column :name
@@ -42,7 +42,7 @@ ActiveAdmin.register Customer do
 
   show do
     attributes_table do
-      row :image  do |customer|
+      row :images  do |customer|
         image_tag customer.images.last.file.url
       end
     end
